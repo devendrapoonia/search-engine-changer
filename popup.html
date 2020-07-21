@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search egnine changer</title>
+  <style>
+    body {
+      font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+      font-size: 100%;
+    }
+
+    #status {
+      width: 500px;
+    }
+
+    #invalid{
+      display: none;
+    }
+
+    .btn {
+      margin-left: 40%;
+    }
+
+    #iframe {
+      position: absolute;
+      width: 35%;
+      margin-left: -240px;
+      margin-top: 50px;
+      height: 76%;
+    }
+
+    select {
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      width: -webkit-fill-available;
+      height: 2.5rem;
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    select:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    #invalid2{
+      display: none;
+    }
+    
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <div id="status">
+    <div class="container">
+      <select class="my-3" id="dropdwn">
+        <option id="select" value="null">Select search engine</option>
+        <option value="google">Google</option>
+        <option value="duck">Duck Duck Go</option>
+        <option value="bing">Bing</option>
+        <option value="yahoo">Yahoo</option>
+        </select>
+        <input type="text" class="form-control my-1" placeholder="Type here to search" id="input">
+        <p id="invalid" class="invalid-feedback my-2">Please check the values</p>
+        <button class="btn btn-success my-2" id="searchbtn">Search</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
